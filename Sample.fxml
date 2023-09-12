@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <right>
+      <Pane prefHeight="537.0" prefWidth="721.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="myInfo" layoutX="15.0" layoutY="447.0" text="Michelle Nguyen, UIN: 630002763, michellenguyen6@tamu.edu" />
+            <Button fx:id="exitButton" layoutX="556.0" layoutY="415.0" mnemonicParsing="false" onAction="#handleExitButton" prefHeight="29.0" prefWidth="35.0" text="Exit" />
+            <Label layoutX="306.0" layoutY="6.0" text="Attendance GUI" />
+            <MenuButton fx:id="menuButton" layoutX="302.0" layoutY="41.0" mnemonicParsing="false" onAction="#handleMenuSelection" text="MenuButton">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#loadLog" text="A - load_log" />
+                <MenuItem mnemonicParsing="false" onAction="#print_collection_attendancelog" text="B - print_collection()" />
+                  <MenuItem mnemonicParsing="false" onAction="#print_count_attendacelog" text="C - print_count()" />
+                  <MenuItem mnemonicParsing="false" onAction="#loadRoster" text="D - load_log()" />
+                  <MenuItem mnemonicParsing="false" onAction="#print_collection_roster" text="E - print_collection()" />
+                  <MenuItem mnemonicParsing="false" onAction="#print_count_roster" text="F - print_count()" />
+                  <MenuItem mnemonicParsing="false" onAction="#studentNotInClass" text="G - list_students_not_in_class(" />
+                  <MenuItem mnemonicParsing="false" onAction="#ListAllTimesCheckInOut" text="H - list_all_times_checking_in_and_out()" />
+                  <MenuItem mnemonicParsing="false" onAction="#ListAllTimesCheckIn" text="I - list_all_times_checked_in()" />
+                  <MenuItem mnemonicParsing="false" onAction="#studentsLateToClass" text="J - list_students_late_to_class()" />
+                  <MenuItem mnemonicParsing="false" onAction="#firstToEnter" text="K - get_first_student_to_enter()" />
+                  <MenuItem mnemonicParsing="false" onAction="#attendanceData" text="L - print_attendance_data_for_student()" />
+                  <MenuItem mnemonicParsing="false" onAction="#IsPresent" text="M - is_present()" />
+                  <MenuItem mnemonicParsing="false" onAction="#allStudentsCheckedIn" text="N - list_all_students_checked_in()" />
+                  <MenuItem mnemonicParsing="false" onAction="#checkedInBefore" text="O - list_all_students_checked_in_before()" />
+                  <MenuItem mnemonicParsing="false" onAction="#attendanceCount" text="P - list_students_attendance_count()" />
+                  <MenuItem mnemonicParsing="false" onAction="#firstStudentToEnter" text="Q - get_first_student_to_enter()" />
+                  <MenuItem mnemonicParsing="false" onAction="#printQuery" text="R - print_query_list()" />
+                  <MenuItem mnemonicParsing="false" onAction="#printCount" text="S - print_count()" />
+                  <MenuItem mnemonicParsing="false" text="0 - Exit program" />
+              </items>
+            </MenuButton>
+            <TextArea fx:id="outputTextArea" layoutX="185.0" layoutY="195.0" prefHeight="225.0" prefWidth="354.0" />
+            <ScrollBar layoutX="525.0" layoutY="258.0" orientation="VERTICAL" />
+            <TextField fx:id="firstName" layoutX="41.0" layoutY="162.0" prefHeight="25.0" prefWidth="107.0" promptText="Enter First Name" />
+            <TextField fx:id="lastName" layoutX="158.0" layoutY="162.0" prefHeight="25.0" prefWidth="102.0" promptText="Enter Last Name" />
+            <TextField fx:id="date" layoutX="271.0" layoutY="162.0" prefHeight="25.0" prefWidth="137.0" promptText="Enter Date MM/DD/YY" />
+            <TextField fx:id="time" layoutX="420.0" layoutY="162.0" prefHeight="25.0" prefWidth="123.0" promptText="Enter Time hh:mm:ss" />
+            <Label fx:id="whatToDo" layoutX="157.0" layoutY="66.0" text="Label" />
+            <TextField fx:id="day" layoutX="556.0" layoutY="162.0" prefHeight="25.0" prefWidth="131.0" promptText="Enter Number of Days" />
+         </children>
+      </Pane>
+   </right>
+</BorderPane>
